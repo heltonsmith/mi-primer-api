@@ -3,6 +3,7 @@ package com.apirest.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apirest.model.entity.Cliente;
+import com.apirest.model.entity.DetalleVenta;
 import com.apirest.service.ICliente;
 import com.apirest.service.IDetalleVenta;
 
@@ -77,6 +78,13 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.OK)
     public @ResponseBody ArrayList<Cliente> showAll(){
         return clienteService.findByAll(); // Retorna todos los clientes con el código de estado HTTP 200 (OK)
+    }
+
+    // Maneja solicitudes GET a la URL "/api/v1/cliente/ventas/{id}"
+    @GetMapping("cliente/ventas/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ArrayList<Map<String, Object>> mostrarVentas(@PathVariable Integer id){
+        return detalleService.mostrarVentas(id); // Retorna una lista de ventas de un cliente con un código de estado HTTP 200 (OK)
     }
 
 }

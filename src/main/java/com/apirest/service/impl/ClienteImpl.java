@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.apirest.model.dao.ClienteDao;
-import com.apirest.model.dao.VentaDao;
+import com.apirest.model.dao.DetalleVentaDao;
 import com.apirest.model.entity.Cliente;
+import com.apirest.model.entity.DetalleVenta;
 import com.apirest.service.ICliente;
 
 @Service
@@ -18,9 +19,9 @@ public class ClienteImpl implements ICliente {
     @Autowired
     private ClienteDao clienteDao;
 
-    // Inyección de dependencia del ClienteDao
+    // Inyección de dependencia del DetalleVenta
     @Autowired
-    private VentaDao ventaDao;
+    private DetalleVentaDao detalleDao;
 
     // Método para guardar un cliente en la base de datos
     @Transactional
@@ -50,4 +51,9 @@ public class ClienteImpl implements ICliente {
         return (ArrayList<Cliente>) clienteDao.findAll();
     }
 
+    // Método para mostrar las ventas de un cliente
+    @Override
+    public ArrayList<DetalleVenta> mostrarVentas(Integer id) {
+        return (ArrayList<DetalleVenta>) detalleDao.findAll();
+    }
 }

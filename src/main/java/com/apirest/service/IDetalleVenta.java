@@ -1,5 +1,8 @@
 package com.apirest.service;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 import com.apirest.model.entity.DetalleVenta;
 
 public interface IDetalleVenta {
@@ -11,4 +14,7 @@ public interface IDetalleVenta {
 
     // Método para eliminar un detalle de venta de la base de datos
     void delete(DetalleVenta venta);
+
+    // Método para traer una lista de detalle de venta de la base de datos
+    ArrayList<Map<String, Object>> mostrarVentas(Integer id);
 }
