@@ -1,7 +1,6 @@
 package com.apirest.service.impl;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.apirest.model.dao.ClienteDao;
 import com.apirest.model.dao.VentaDao;
 import com.apirest.model.entity.Cliente;
-import com.apirest.model.entity.Venta;
 import com.apirest.service.ICliente;
 
 @Service

@@ -1,7 +1,5 @@
 package com.apirest.service;
 
-import java.util.List;
-
 import com.apirest.model.entity.Venta;
 
 public interface IVenta {

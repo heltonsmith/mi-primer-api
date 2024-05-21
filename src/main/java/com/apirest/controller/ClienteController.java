@@ -3,7 +3,6 @@ package com.apirest.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apirest.model.entity.Cliente;
-import com.apirest.model.entity.DetalleVenta;
 import com.apirest.service.ICliente;
 import com.apirest.service.IDetalleVenta;
 
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
