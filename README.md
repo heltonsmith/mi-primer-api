@@ -1,6 +1,7 @@
 **BD Modelo Físico inicial:**
 
-![Captura de pantalla 2024-05-07 102444]([https://github.com/heltonsmith/mi-primer-api/assets/4924122/18712d9c-b178-4b39-beae-eebb22d841df](https://raw.githubusercontent.com/heltonsmith/mi-primer-api/main/bd%20relaciones%202.jpg))
+![bd relaciones 2](https://github.com/heltonsmith/mi-primer-api/assets/4924122/b722405f-b84c-4f0a-af16-6121f9e2611c)
+
 
 **BD SQL**
 
