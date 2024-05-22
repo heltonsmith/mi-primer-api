@@ -3,7 +3,6 @@ package com.apirest.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apirest.model.entity.Cliente;
-import com.apirest.model.entity.DetalleVenta;
 import com.apirest.service.ICliente;
 import com.apirest.service.IDetalleVenta;
 
