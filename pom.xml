@@ -56,6 +56,17 @@
             <artifactId>transbank-sdk-java</artifactId>
             <version>5.0.0</version>
         </dependency>
+		<!-- Dependencia para trabajar con JSON -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		
+		<!-- Dependencia para hacer solicitudes HTTP -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
