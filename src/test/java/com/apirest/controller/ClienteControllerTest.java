@@ -23,7 +23,7 @@ import com.apirest.service.IDetalleVenta;
 
 @ExtendWith(MockitoExtension.class)
 @WebMvcTest(ClienteController.class)
-public class ClienteControllerTest {
+class ClienteControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -35,7 +35,7 @@ public class ClienteControllerTest {
     private IDetalleVenta detalleService;
 
     @Test
-    public void testShowAll() throws Exception {
+    void testShowAll() throws Exception {
         Cliente cliente1 = new Cliente();
         cliente1.setIdCliente(1);
         cliente1.setNombre("Cliente 1");

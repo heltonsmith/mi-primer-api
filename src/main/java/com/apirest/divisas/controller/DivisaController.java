@@ -44,8 +44,9 @@ public class DivisaController {
                 .map(divisas -> {
                     Divisa divisa = divisas.get(codigo); // Obtiene la divisa del Map
                     if (divisa == null) {
+                        String error = "No se encontró la divisa con código: " + codigo;
                         // Si la divisa no se encuentra, devuelve un error 404 con un mensaje
-                        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró la divisa con código: " + codigo);
+                        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
                     }
                     // Si la divisa se encuentra, devuelve la divisa en el cuerpo de la respuesta
                     return ResponseEntity.ok(divisa);
@@ -87,6 +88,7 @@ public class DivisaController {
         response.forEach((key, value) -> {
             if (value instanceof Map) {
                 // Si el valor es un Map, lo convierte en un objeto Divisa
+                @SuppressWarnings("unchecked")
                 Map<String, Object> divisaMap = (Map<String, Object>) value;
                 Divisa divisa = new Divisa();
                 divisa.setCodigo((String) divisaMap.get("codigo"));
